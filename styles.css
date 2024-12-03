@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald|Roboto:400,700");
+
+body {
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #eaf4f4;
+}
+
+nav {
+  background-color: #399934;
+}
+
+nav p, h2 {
+  color: #eaf4f4;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "Oswald", sans-serif;
+  color: #02020a;
+  margin-top: 60px;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #02020a;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100vh;
+  transition: transform 1s ease-in-out;
+}
+
+.item-linha-tempo {
+  display: none; 
+  flex: 0 0 calc(100vh / 2);
+  margin-right: 200px;
+  padding: 48px 32px 32px;
+  box-sizing: border-box;
+  text-align: right;
+  margin-left: 30%;
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: all 1s ease-in-out;
+}
+
+.item-linha-tempo::before {
+  content: attr(date-is);
+  position: absolute;
+  right: 25px;
+  top: 16px;
+  font-family: serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #399934;
+}
+
+.item-linha-tempo::after {
+  width: 10px;
+  height: 10px;
+  display: block;
+  top: 16px;
+  position: absolute;
+  right: -7px;
+  border-radius: 10px;
+  content: "";
+  border: 2px solid #399934;
+  background: #f6fff8;
+}
